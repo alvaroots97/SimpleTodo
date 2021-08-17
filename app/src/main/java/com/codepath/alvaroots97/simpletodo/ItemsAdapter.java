@@ -17,7 +17,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
         void onItemClicked(int position);
     }
     public interface OnLongClickListener {
-        void onItemLongClick(int position);
+        void onItemLongClicked(int position);
     }
     List<String> items;
     OnLongClickListener longClickListener;
@@ -73,7 +73,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder>{
                 @Override
                 public boolean onLongClick(View v) {
                     // Notify the listener which position was long pressed
-                    longClickListener.onItemLongClick(getAdapterPosition());
+                    longClickListener.onItemLongClicked(getAdapterPosition());
                     return true;
                 }
             });

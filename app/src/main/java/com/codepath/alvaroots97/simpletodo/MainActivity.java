@@ -43,16 +43,16 @@ public class MainActivity extends AppCompatActivity {
         etItem = findViewById(R.id.etItem);
         rvItems = findViewById(R.id.rvItems);
 
-        //etItem.setText("I'm doing this from java!");
+        loadItems();
 
-        items = new ArrayList<>();
-        items.add("Buy soy");
-        items.add("Go to the beach");
-        items.add("Have fun");
+//        items = new ArrayList<>();
+//        items.add("Buy soy");
+//        items.add("Go to the beach");
+//        items.add("Have fun");
 
         ItemsAdapter.OnLongClickListener onLongClickListener = new ItemsAdapter.OnLongClickListener(){
             @Override
-            public void onItemLongClick(int position) {
+            public void onItemLongClicked(int position) {
                 // Delete the item from the model
                 items.remove(position);
                 // Notify the adapter
